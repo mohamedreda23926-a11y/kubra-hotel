@@ -1,0 +1,286 @@
+  /* Basic Styling for Demonstration - In a real project, this would be in a separate .css file */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px 0;
+        }
+        header {
+            background: #2c3e50;
+            color: #fff;
+            padding: 1rem 0;
+            border-bottom: 5px solid #e74c3c;
+        }
+        header h1 {
+            float: left;
+            margin: 0;
+            padding: 0 20px;
+            font-size: 2.2em;
+        }
+        header h1 span {
+            color: #e74c3c;
+        }
+        header nav {
+            float: right;
+            padding: 0 20px;
+            margin-top: 10px;
+        }
+        header ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            display: inline;
+            padding: 0 15px;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 1em;
+            transition: color 0.3s ease;
+        }
+        header a:hover {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        .hero {
+            background: url('https://via.placeholder.com/1500x600/34495e/ecf0f1?text=Grand+Hotel+Experience') no-repeat center center/cover;
+            height: 500px;
+            text-align: center;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            position: relative;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+        .hero .hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 20px;
+        }
+        .hero h2 {
+            font-size: 3.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+        .hero p {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+        }
+        .btn {
+            display: inline-block;
+            background: #e74c3c;
+            color: #fff;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+        .btn:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
+        }
+        section {
+            padding: 60px 0;
+            background-color: #fff;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        section h3 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+            color: #2c3e50;
+            position: relative;
+        }
+        section h3::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: #e74c3c;
+            margin: 10px auto 0;
+        }
+        .about-content {
+            text-align: center;
+            max-width: 800px;
+            margin: auto;
+            font-size: 1.1em;
+        }
+        .room-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+        .room-card {
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .room-card:hover {
+            transform: translateY(-5px);
+        }
+        .room-card img {
+            max-width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        .room-card h4 {
+            margin-top: 0;
+            font-size: 1.5em;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .room-card p {
+            font-size: 0.95em;
+            color: #555;
+            margin-bottom: 15px;
+        }
+        .room-card .price {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #e74c3c;
+            margin-bottom: 20px;
+        }
+
+        /* Booking Form Specific Styles */
+        .booking-form {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 40px;
+            background: #ecf0f1;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .booking-form label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        .booking-form input[type="date"],
+        .booking-form input[type="number"],
+        .booking-form select {
+            width: calc(100% - 24px); /* Account for padding and border */
+            padding: 12px;
+            margin-bottom: 25px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+            box-sizing: border-box; /* Include padding and border in the element's total width and height */
+        }
+        .booking-form button {
+            width: 100%;
+            padding: 15px;
+            background: #e74c3c;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+        .booking-form button:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
+        }
+
+        .amenities-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            text-align: center;
+        }
+        .amenities-list li {
+            background: #f2f2f2;
+            padding: 15px;
+            border-radius: 8px;
+            font-weight: bold;
+            color: #555;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .contact-info {
+            text-align: center;
+            font-size: 1.1em;
+            color: #555;
+        }
+        .contact-info p {
+            margin-bottom: 10px;
+        }
+        .contact-info iframe {
+            margin-top: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        footer {
+            background: #2c3e50;
+            color: #fff;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 30px;
+            font-size: 0.9em;
+        }
+        footer a {
+            color: #e74c3c;
+            text-decoration: none;
+            margin: 0 8px;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            header h1, header nav {
+                float: none;
+                text-align: center;
+            }
+            header h1 {
+                margin-bottom: 10px;
+            }
+            header li {
+                display: block;
+                padding: 8px 0;
+            }
+            .hero h2 {
+                font-size: 2.5em;
+            }
+            .hero p {
+                font-size: 1.1em;
+            }
+            .container {
+                width: 95%;
+            }
+        }
